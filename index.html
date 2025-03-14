@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>STELLMODS</title>
+    <style>
+        /* Reset e configuração global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        body {
+            display: flex;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR - LATERAL ESQUERDA */
+        .navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #b74b4b;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background-color: #b74b4b;
+        }
+
+        /* BOTÃO MENU MOBILE */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            display: none;
+            z-index: 200;
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+        .main-content {
+            margin-left: 250px;
+            padding: 4rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home-img img {
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #b74b4b;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 1rem;
+        }
+
+        .typing-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* ÍCONES SOCIAIS */
+        .social-icons {
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #b74b4b;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            margin: 0.5rem;
+            color: #b74b4b;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #b74b4b;
+            color: black;
+        }
+
+        /* BOTÃO HIRE ME */
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background-color: black;
+            border: 2px solid #b74b4b;
+            border-radius: 25px;
+            font-size: 1.4rem;
+            color: #b74b4b;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b74b4b;
+            color: black;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                transform: translateX(-100%);
+                width: 60%;
+            }
+
+            .navbar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 2rem;
+            }
+
+            .home-img img {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .typing-text {
+                font-size: 1.5rem;
+            }
+
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                font-size: 1.2rem;
+                padding: 0.8rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão Menu Mobile -->
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navbar fixa na esquerda -->
+    <nav class="navbar">
+        <a href="#" class="logo">STELLMODS</a>
+        <a href="#" class="active">Home</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        <a href="#">Sobre</a>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <section class="main-content">
+        <div class="home-img">
+            <img src="https://i.postimg.cc/2ytcvrQz/Picsart-25-03-14-20-51-02-212.png" alt="STELLMODS">
+        </div>
+        <h1>POWERED BY <span style="color: #b74b4b;">Stellmods</span></h1>
+        <h3 class="typing-text">Nossos serviços: <span></span></h3>
+
+        <div class="social-icons">
+            <a href="https://github.com/Steliobi"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/stellmods_sd?igsh=YzljYTk1ODg3Zg=="><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://wa.link/vclnts"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <a href="#" class="btn">Hire me</a>
+    </section>
+
+    <!-- Script para menu mobile -->
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".navbar").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
